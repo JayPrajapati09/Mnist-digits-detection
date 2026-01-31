@@ -1,5 +1,6 @@
-torch
 streamlit
 streamlit-drawable-canvas
+torch
+torchvision
 Pillow
 numpy
