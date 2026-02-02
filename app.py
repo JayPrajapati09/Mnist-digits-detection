@@ -29,11 +29,11 @@ st.write("Draw a digit (0-9) on the canvas above and see the processed image bel
 
 # Load the checkpoint
 model1_checkpoint = torch.load("checkpoint_modelv2.pth", 
-                        map_location=torch.device('cpu')) ## Small Custom Model
+                        map_location=torch.device('cpu'), weights_only=False) ## Small Custom Model
 model2_checkpoint = torch.load("checkpoint_modelv3.pth", 
-                        map_location=torch.device('cpu')) ## Deep Dustom Model
+                        map_location=torch.device('cpu'), weights_only=False) ## Deep Dustom Model
 model3_checkpoint = torch.load("checkpoint_modelv4.pth", 
-                        map_location=torch.device('cpu')) ## Mobilenet V3 transfer learning model
+                        map_location=torch.device('cpu'), weights_only=False) ## Mobilenet V3 transfer learning model
 
 # Create the model instance
 model1 = MNISTmodelv0(input_shape=1, hidden_units=10, output_shape=10)
